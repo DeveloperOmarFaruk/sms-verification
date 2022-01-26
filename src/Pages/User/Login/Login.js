@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Signup/Signup.scss";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -16,9 +16,9 @@ const Login = () => {
   };
 
   // ReCAPTCHA Function
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+  // function onChange(value) {
+  //   console.log("Captcha value:", value);
+  // }
 
   // Forgot Function
   let navigate = useNavigate();
@@ -64,12 +64,12 @@ const Login = () => {
                     onChange={loginHandleChange}
                   />
                 </div>
-                <div class="row clearfix">
+                {/* <div class="row clearfix">
                   <ReCAPTCHA
                     sitekey="6LdsPFYdAAAAAC-jwLakqG1w8IZzJumZ0N9pmBu1"
                     onChange={onChange}
                   />
-                </div>
+                </div> */}
                 <br />
                 <input className="button" type="submit" value="Log in" />
               </form>

@@ -10,13 +10,13 @@ const ResetConfirmations = () => {
   }
   return (
     <>
-      <div class="form_wrapper">
-        <div class="form_container">
-          <div class="title_container">
+      <div className="form_wrapper">
+        <div className="form_container">
+          <div className="title_container">
             <h2>Reset Password</h2>
           </div>
-          <div class="row clearfix">
-            <div class="">
+          <div className="row clearfix">
+            <div className="">
               <p style={{ textAlign: "center", fontSize: "8rem" }}>
                 <i className="fas fa-envelope-open-text"></i>
               </p>

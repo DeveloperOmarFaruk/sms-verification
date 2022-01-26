@@ -93,10 +93,36 @@ body {
             }
         }
     }
+    select {
+        width: 100%;
+        padding: 0px 10px 0px 35px;
+        height: 35px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        transition: all 0.30s ease-in-out;
+        position: absolute;
+    }
+    select:hover {
+        background: #fafafa;
+    }
+    select:focus {
+        -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        border: 1px solid $yellow;
+        background: #fafafa;
+    }
     input {
         &[type="text"],
         &[type="email"],
-        &[type="password"] {
+        &[type="password"],
+        &[type="date"],
+        &[type="number"] {
             width: 100%;
             padding: 8px 10px 9px 35px;
             height: 35px;
@@ -110,12 +136,16 @@ body {
         }
         &[type="text"]:hover,
         &[type="email"]:hover,
-        &[type="password"]:hover {
+        &[type="password"]:hover,
+        &[type="date"]:hover,
+        &[type="number"]:hover {
             background: #fafafa;
         }
         &[type="text"]:focus,
         &[type="email"]:focus,
-        &[type="password"]:focus {
+        &[type="password"]:focus,
+        &[type="date"]:focus,
+        &[type="number"]:focus {
             -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
             -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
             box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);

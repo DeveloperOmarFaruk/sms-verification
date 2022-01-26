@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Signup/Signup.scss";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const Forgot = () => {
   // Forgat Email function
@@ -13,23 +13,23 @@ const Forgot = () => {
   };
 
   // ReCAPTCHA Function
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+  // function onChange(value) {
+  //   console.log("Captcha value:", value);
+  // }
   return (
     <>
-      <div class="form_wrapper">
-        <div class="form_container">
-          <div class="title_container">
+      <div className="form_wrapper">
+        <div className="form_container">
+          <div className="title_container">
             <h2>Request password reset</h2>
           </div>
           <div class="row clearfix">
-            <div class="">
+            <div className="">
               <form>
-                <div class="input_field">
+                <div className="input_field">
                   {" "}
                   <span>
-                    <i aria-hidden="true" class="fa fa-envelope"></i>
+                    <i aria-hidden="true" className="fa fa-envelope"></i>
                   </span>
                   <input
                     type="email"
@@ -40,14 +40,14 @@ const Forgot = () => {
                     onChange={forgotHandleChange}
                   />
                 </div>
-                <div class="row clearfix">
+                {/* <div class="row clearfix">
                   <ReCAPTCHA
                     sitekey="6LdsPFYdAAAAAC-jwLakqG1w8IZzJumZ0N9pmBu1"
                     onChange={onChange}
                   />
-                </div>
+                </div> */}
                 <br />
-                <input class="button" type="submit" value="Send" />
+                <input className="button" type="submit" value="Send" />
               </form>
             </div>
           </div>

@@ -1,3 +1,6 @@
+/* Search Design */
+
+
 /* Table Design */
 
 .product-data-table {
@@ -29,6 +32,39 @@
 
 .table tbody tr:nth-child(odd) {
     background-color: #fdfdfd;
+}
+
+
+/* Button */
+
+.product-web-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-web-btn button {
+    padding: 10px 15px;
+    margin: 20px;
+    cursor: pointer;
+    border: 1px solid #ffdd40;
+    color: #ffdd40;
+    background-color: #1f5156;
+}
+
+.regular {
+    padding: 10px 15px;
+    margin: 20px;
+    cursor: pointer;
+    border: 1px solid #ffdd40;
+    color: #ffdd40;
+    background-color: #1f5156;
+}
+
+.product-web-btn button:focus {
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
 

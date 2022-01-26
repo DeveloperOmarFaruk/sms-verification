@@ -17,18 +17,18 @@ const ResetPassword = () => {
   };
   return (
     <>
-      <div class="form_wrapper">
-        <div class="form_container">
-          <div class="title_container">
+      <div className="form_wrapper">
+        <div className="form_container">
+          <div className="title_container">
             <h2>Reset Password</h2>
           </div>
-          <div class="row clearfix">
-            <div class="">
+          <div className="row clearfix">
+            <div className="">
               <form>
-                <div class="input_field">
+                <div className="input_field">
                   {" "}
                   <span>
-                    <i aria-hidden="true" class="fa fa-envelope"></i>
+                    <i aria-hidden="true" className="fa fa-envelope"></i>
                   </span>
                   <input
                     type="email"
@@ -39,10 +39,10 @@ const ResetPassword = () => {
                     onChange={newPsswordHandleChange}
                   />
                 </div>
-                <div class="input_field">
+                <div className="input_field">
                   {" "}
                   <span>
-                    <i aria-hidden="true" class="fa fa-lock"></i>
+                    <i aria-hidden="true" className="fa fa-lock"></i>
                   </span>
                   <input
                     type="password"
@@ -53,10 +53,10 @@ const ResetPassword = () => {
                     onChange={newPsswordHandleChange}
                   />
                 </div>
-                <div class="input_field">
+                <div className="input_field">
                   {" "}
                   <span>
-                    <i aria-hidden="true" class="fa fa-lock"></i>
+                    <i aria-hidden="true" className="fa fa-lock"></i>
                   </span>
                   <input
                     type="password"
@@ -69,7 +69,7 @@ const ResetPassword = () => {
                 </div>
 
                 <br />
-                <input class="button" type="submit" value="Reset" />
+                <input className="button" type="submit" value="Reset" />
               </form>
             </div>
           </div>

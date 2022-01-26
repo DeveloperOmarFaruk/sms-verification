@@ -153,7 +153,7 @@ const CheckoutForm = (props) => {
               role="status"
             ></div>
           ) : (
-            `PAY ₹${props.amount}`
+            `PAY $${props.amount}`
           )}
         </button>
         {errorMsg && <div className="text-danger mt-2">{errorMsg}</div>}

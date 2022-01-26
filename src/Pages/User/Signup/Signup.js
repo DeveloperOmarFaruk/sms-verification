@@ -1,24 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Signup.scss";
-import ReCAPTCHA from "react-google-recaptcha";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   // Registration Function
   const [regState, setRegState] = useState({
+    first: "",
+    sure: "",
     email: "",
+    phone: "",
+    birth: "",
     password: "",
-    rePassword: "",
+    username: "",
+    code: "",
   });
 
   const regHandleChange = (e) => {
     setRegState({ ...regState, [e.target.name]: e.target.value });
   };
-
-  // ReCAPTCHA Function
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
 
   // Login Function
   let navigate = useNavigate();
@@ -28,18 +27,48 @@ const Signup = () => {
   }
   return (
     <>
-      <div class="form_wrapper">
-        <div class="form_container">
-          <div class="title_container">
+      <div className="form_wrapper">
+        <div className="form_container">
+          <div className="title_container">
             <h2>Register Form</h2>
           </div>
-          <div class="row clearfix">
-            <div class="">
+          <div className="row clearfix">
+            <div className="">
               <form>
-                <div class="input_field">
+                <div className="input_field">
                   {" "}
                   <span>
-                    <i aria-hidden="true" class="fa fa-envelope"></i>
+                    <i className="fas fa-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    required
+                    name="first"
+                    value={regState.first}
+                    onChange={regHandleChange}
+                  />
+                </div>
+
+                <div className="input_field">
+                  {" "}
+                  <span>
+                    <i className="fas fa-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="Surename"
+                    required
+                    name="sure"
+                    value={regState.sure}
+                    onChange={regHandleChange}
+                  />
+                </div>
+
+                <div className="input_field">
+                  {" "}
+                  <span>
+                    <i aria-hidden="true" className="fa fa-envelope"></i>
                   </span>
                   <input
                     type="email"
@@ -50,10 +79,68 @@ const Signup = () => {
                     onChange={regHandleChange}
                   />
                 </div>
-                <div class="input_field">
+
+                <div className="input_field">
                   {" "}
                   <span>
-                    <i aria-hidden="true" class="fa fa-lock"></i>
+                    <i className="fas fa-phone-volume"></i>
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="Phone"
+                    required
+                    name="phone"
+                    value={regState.phone}
+                    onChange={regHandleChange}
+                  />
+                </div>
+
+                <div className="select">
+                  {" "}
+                  {/* <span>
+                    <i className="fas fa-venus-mars"></i>
+                  </span> */}
+                  <select name="gender" className="input_field">
+                    <option value="female">Gender</option>
+                    <option value="male">Female</option>
+                    <option value="other">Male</option>
+                  </select>
+                </div>
+
+                <div className="input_field">
+                  {" "}
+                  <span>
+                    <i className="far fa-calendar-alt"></i>
+                  </span>
+                  <input
+                    type="date"
+                    placeholder="Date of Birth"
+                    required
+                    name="birth"
+                    value={regState.birth}
+                    onChange={regHandleChange}
+                  />
+                </div>
+
+                <div className="input_field">
+                  {" "}
+                  <span>
+                    <i className="fas fa-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    required
+                    name="username"
+                    value={regState.username}
+                    onChange={regHandleChange}
+                  />
+                </div>
+
+                <div className="input_field">
+                  {" "}
+                  <span>
+                    <i aria-hidden="true" className="fa fa-lock"></i>
                   </span>
                   <input
                     type="password"
@@ -64,34 +151,30 @@ const Signup = () => {
                     onChange={regHandleChange}
                   />
                 </div>
-                <div class="input_field">
+
+                <div className="input_field">
                   {" "}
                   <span>
-                    <i aria-hidden="true" class="fa fa-lock"></i>
+                    <i className="fas fa-qrcode"></i>
                   </span>
                   <input
-                    type="password"
-                    placeholder="Re Password"
+                    type="number"
+                    placeholder="Access code"
                     required
-                    name="rePassword"
-                    value={regState.rePassword}
+                    name="code"
+                    value={regState.code}
                     onChange={regHandleChange}
                   />
                 </div>
-                <div class="row clearfix">
-                  <ReCAPTCHA
-                    sitekey="6LdsPFYdAAAAAC-jwLakqG1w8IZzJumZ0N9pmBu1"
-                    onChange={onChange}
-                  />
-                </div>
+
                 <br />
-                <input class="button" type="submit" value="Sign up" />
+                <input className="button" type="submit" value="Sign up" />
               </form>
             </div>
           </div>
         </div>
       </div>
-      <p class="credit">
+      <p className="credit">
         {" "}
         <p
           style={{ cursor: "pointer", textDecoration: "underline" }}

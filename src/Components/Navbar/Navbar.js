@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className={click ? "main-container" : ""} onClick={() => Close()} />
       <nav className="navbar" onClick={(e) => e.stopPropagation()}>
         <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
+          <NavLink exact to="#" className="nav-logo">
             Company Logo
             <i className="fa fa-code"></i>
           </NavLink>
@@ -42,14 +42,27 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 exact
-                to="/order"
+                to="/members"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
-                Order
+                Members
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/friends"
+                activeClassName="active"
+                className="nav-links"
+                onClick={click ? handleClick : null}
+              >
+                Friends
+              </NavLink>
+            </li>
+
             <li className="nav-item">
               <NavLink
                 exact
@@ -65,31 +78,31 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 exact
-                to="/blog"
+                to="/survey"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
-                Blog
+                Survey
               </NavLink>
             </li>
 
             <li className="nav-item">
               <NavLink
                 exact
-                to="/dashboard"
+                to="/profile"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
-                Dashboard
+                Profile
               </NavLink>
             </li>
 
             <li className="nav-item">
               <NavLink
                 exact
-                to="/login"
+                to="/"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
